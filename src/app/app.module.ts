@@ -20,7 +20,7 @@ import {APIService} from './api.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
     
   ],
   providers: [APIService],

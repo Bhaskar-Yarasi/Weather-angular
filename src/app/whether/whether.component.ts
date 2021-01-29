@@ -9,6 +9,9 @@ import {APIService} from '../api.service';
 export class WhetherComponent implements OnInit {
   weather:any;
   public weatherData: any;
+  clr:any;
+  bgColor:any;
+  
 
   constructor(private formBuilder: FormBuilder,private as:APIService) { }
 
@@ -21,7 +24,39 @@ export class WhetherComponent implements OnInit {
     this.as
     .getWeather(formValues.location)
     .subscribe(data =>{ this.weatherData = data;
-    console.log(this.weatherData);  });
+    console.log(this.weatherData); 
+    
+    this.changecolor(this.weatherData.current.weather_descriptions)
+  
+ });
 
+}
+changecolor(item:any){
+  debugger;
+  switch(item[0]){
+    case "Partly cloudy":
+      this.bgColor="yellow";
+      this.clr="white";
+      break;
+      case "Haze":
+      this.bgColor="orange";
+      this.clr="white";
+      break;
+      case "Mist":
+      this.bgColor="lightblue";
+      this.clr="white";
+      break;
+      case "Cloudy":
+        this.bgColor="darkblue";
+        this.clr="white";
+        break;
+        case "Sunny":
+        this.bgColor="red";
+        this.clr="white";
+        break;
+  }
+
+  
+ 
 }
 }
