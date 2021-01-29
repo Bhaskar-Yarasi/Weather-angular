@@ -28,7 +28,9 @@ padding: 10px;
 h4{
     position: absolute;
     white-space: nowrap;
-    margin: 25px;
+    margin-left: -27px;
+    padding: 29px;
+
     text-align: center;
     animation: floatText 5s infinite alternate ease-in-out;
 }
@@ -57,7 +59,11 @@ h4{
     perspective: 1000px;
   }
   .card-body{
-    margin-left: 110px;
+    margin: initial;
+
+  }
+  img{
+    border-radius: 19px;
 
   }
 
@@ -77,5 +83,20 @@ h4{
     40%, 60% {
       transform: translate3d(4px, 0, 0);
     }
+  }
+  img{
+
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+ 
+  
+  }
+  @keyframes example{
+    0%   {left:0px; top:0px;}
+    25%  { left:30px; top:0px;}
+    
+    100% {left:0px; right:0px;top:0px;}
   }
   
