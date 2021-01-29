@@ -1,5 +1,8 @@
 
-
+span{
+  color: red;
+  margin: 5px;
+}
 .row{
     display: flex !important;
     flex-direction: column !important;
@@ -54,7 +57,7 @@ h4{
     perspective: 1000px;
   }
   .card-body{
-    margin-left: 100px;
+    margin-left: 110px;
 
   }
 

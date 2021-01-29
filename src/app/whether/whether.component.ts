@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup,Validators } from '@angular/forms';
 import {APIService} from '../api.service';
 @Component({
   selector: 'app-whether',
@@ -7,6 +7,7 @@ import {APIService} from '../api.service';
   styleUrls: ['./whether.component.css']
 })
 export class WhetherComponent implements OnInit {
+  
   weather:any;
   public weatherData: any;
   clr:any;
@@ -17,7 +18,7 @@ export class WhetherComponent implements OnInit {
 
   ngOnInit(): void {
     this.weather = this.formBuilder.group({
-      location: ['']
+      location: ['',[Validators.required,Validators.pattern('^[a-zA-Z \-\']+')] ]
     });
   }
   sendToAPIXU(formValues:any) {

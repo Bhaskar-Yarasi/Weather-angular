@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="container" style="background-image: url();">
+<div class="container">
     <div class="row">
       <div class="col-md-6">  <h3 class="text-center my-4">Search for Weather:</h3>
 
@@ -9,17 +9,21 @@
               <input
                 class="form-control"
                 type="text"
-                placeholder="Please Enter Location"
-                formControlName="location"
+                placeholder=" What City ?"
+                formControlName="location" required
               />
-             </div><br>
+              <span *ngIf="weather.controls.location.touched && weather.controls.location.hasError('required')">Please Enter Location</span>
+              <span *ngIf="weather.controls.location.hasError('pattern')">Enter
+                Valid Location</span> 
+            </div><br>
              <div class="text-center"> 
               <button type="submit" class="btn btn-success btn-md">
                 Search for the weather</button>
              </div>
            </form> 
 
-    </div>
+    
+  </div>
       <div  *ngIf="weatherData?.current" class="card"  style="width: 28rem;" [ngStyle]="{'background-color':bgColor }"> 
         <div class="card-body" >
           <i  [ngStyle]="{'color':clr }" class="fa fa-sun-o fa fa-spinner fa-spin fa-3x" aria-hidden="true"></i>
