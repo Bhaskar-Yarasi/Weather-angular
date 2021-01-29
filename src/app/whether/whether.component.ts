@@ -35,7 +35,7 @@ changecolor(item:any){
   debugger;
   switch(item[0]){
     case "Partly cloudy":
-      this.bgColor="yellow";
+      this.bgColor="skyblue";
       this.clr="white";
       break;
       case "Haze":
@@ -54,6 +54,9 @@ changecolor(item:any){
         this.bgColor="red";
         this.clr="white";
         break;
+        case "Patchy rain possible":
+          this.bgColor="pink";
+          this.clr="white";
   }
 
   

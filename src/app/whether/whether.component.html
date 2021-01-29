@@ -20,12 +20,13 @@
            </form> 
 
     </div>
-      <div  *ngIf="weatherData?.current" class="card" id="card1" style="width: 28rem;" [ngStyle]="{'background-color':bgColor }"> 
+      <div  *ngIf="weatherData?.current" class="card"  style="width: 28rem;" [ngStyle]="{'background-color':bgColor }"> 
         <div class="card-body" >
           <i  [ngStyle]="{'color':clr }" class="fa fa-sun-o fa fa-spinner fa-spin fa-3x" aria-hidden="true"></i>
           <!-- <i class="fa-li fa fa-spinner fa-spin fa-3x"></i> -->
-        <h4 [ngStyle]="{'color':clr }">{{weatherData?.location.name}} :{{weatherData?.current.temperature}} °C</h4>
+        
         <h5 [ngStyle]="{'color':clr }">{{weatherData?.current.weather_descriptions}}</h5>
+        <h4 [ngStyle]="{'color':clr }">{{weatherData?.location.name}} :{{weatherData?.current.temperature}} °C</h4>
        
 </div>
       </div>

@@ -6,12 +6,12 @@
 }
 .card{
     margin-top: 20px !important;
-display: block;
+  display: block;
 border-radius: 10px;
-width: 50px;
-height: 150px;
+width: 20em !important;
+height: 200px;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-margin-left: 30%;
+margin-left: 38%;
 
 }
 .col-md-6{
@@ -25,21 +25,24 @@ padding: 10px;
 h4{
     position: absolute;
     white-space: nowrap;
+    margin: 25px;
+    text-align: center;
     animation: floatText 5s infinite alternate ease-in-out;
 }
+
 
 @keyframes floatText{
     0%   { transform:scale(0); }
   30% { transform:scale(1); }
 
   from {
-    left: 40%;
+    left: 20%;
     opacity: 0.2;
   }
 
   to {
     /* left: auto; */
-    left: 40%;
+    left: 20%;
     
   }
 }
@@ -49,6 +52,10 @@ h4{
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     perspective: 1000px;
+  }
+  .card-body{
+    margin-left: 100px;
+
   }
 
   @keyframes shake {
