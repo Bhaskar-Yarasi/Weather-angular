@@ -2,19 +2,32 @@
 span{
   color: red;
   margin: 5px;
+  
+}
+.btn {
+  background-color: darkorange ;
+}
+.container{
+  margin:50px auto;
+  width: 600px;
+  height: 300px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 2px skyblue;
+ background: url("/assets/three.png");
+ 
+
 }
 .row{
     display: flex !important;
     flex-direction: column !important;
+    padding: 20px 0;
 }
 .card{
-    margin-top: 20px !important;
-  display: block;
-border-radius: 10px;
-width: 20em !important;
-height: 200px;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-margin-left: 38%;
+  margin:50px auto;
+  width: 400px;
+  height: 250px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px 2px gray;
 
 }
 .col-md-6{
@@ -30,7 +43,7 @@ h4{
     white-space: nowrap;
     margin-left: -27px;
     padding: 29px;
-
+    font-size: 40px;
     text-align: center;
     animation: floatText 5s infinite alternate ease-in-out;
 }
@@ -57,6 +70,7 @@ h4{
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     perspective: 1000px;
+    
   }
   .card-body{
     margin: initial;

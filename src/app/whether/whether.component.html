@@ -1,8 +1,12 @@
+
+
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 <div class="container">
     <div class="row">
-      <div class="col-md-6">  <h3 class="text-center my-4">Search for Weather:</h3>
+      <div class="col-md-6">  <h3 class="text-center my-4" style="color: white;">Search for Weather:</h3>
 
         <form [formGroup]="weather" (ngSubmit)="sendToAPIXU(weather.value)">
             <div class="form-group">
@@ -17,26 +21,30 @@
                 Valid Location</span> 
             </div><br>
              <div class="text-center"> 
-              <button type="submit" class="btn btn-success btn-md">
+              <button type="submit" class="btn btn-success btn-md" >
                 Search for the weather</button>
              </div>
            </form> 
-
+          </div>
+        </div>
     
   </div>
-      <div  *ngIf="weatherData?.current" class="card"  style="width: 28rem;" [ngStyle]="{'background-color':bgColor }"> 
+      <div  *ngIf="weatherData.current" class="card"  style="width: 28rem;" [ngStyle]="{'background-color':bgColor }"> 
         <div class="card-body" >
-          <div>
-          <img src="{{weatherData?.current.weather_icons[0]}}">
-        </div>
+          
+          <img src="{{weatherData.current.weather_icons[0]}}">
+          <h6 [ngStyle]="{'color':clr }">{{weatherData.current.observation_time}}</h6>
+        
           <!-- <i  [ngStyle]="{'color':clr }" class="fa fa-sun-o fa fa-spinner fa-spin fa-3x" aria-hidden="true"></i>
           <i  [ngStyle]="{'color':clr }" class="fa fa-moon-o fa-2x" aria-hidden="true"></i> -->
           <!-- <i class="fa-li fa fa-spinner fa-spin fa-3x"></i> -->
-        
-        <h5 [ngStyle]="{'color':clr }">{{weatherData?.current.weather_descriptions}}</h5>
-        <h4 [ngStyle]="{'color':clr }">{{weatherData?.location.name}} :{{weatherData?.current.temperature}} °C</h4>
+          
+        <h5 [ngStyle]="{'color':clr }">{{weatherData.current.weather_descriptions}}</h5>
+        <h4  [ngStyle]="{'color':clr }">{{weatherData.location.name}} :{{weatherData?.current.temperature}} °C</h4>
        
 </div>
       </div>
-    </div>
-  </div>
+    
+     
+    
+  

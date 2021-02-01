@@ -9,7 +9,7 @@ import {APIService} from '../api.service';
 export class WhetherComponent implements OnInit {
   
   weather:any;
-  public weatherData: any;
+ weatherData: any;
   clr:any;
   bgColor:any;
   
