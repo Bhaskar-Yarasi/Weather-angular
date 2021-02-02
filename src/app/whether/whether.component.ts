@@ -12,6 +12,7 @@ export class WhetherComponent implements OnInit {
  weatherData: any;
   clr:any;
   bgColor:any;
+ 
   
 
   constructor(private formBuilder: FormBuilder,private as:APIService) { }
@@ -20,6 +21,10 @@ export class WhetherComponent implements OnInit {
     this.weather = this.formBuilder.group({
       location: ['',[Validators.required,Validators.pattern('^[a-zA-Z \-\']+')] ]
     });
+    // setTimeout(
+    //   function(){ 
+    //   location.reload(); 
+    //   }, 60000);
   }
   sendToAPIXU(formValues:any) {
     this.as
@@ -59,8 +64,8 @@ changecolor(item:any){
           this.bgColor="pink";
           this.clr="white";
   }
-
-  
- 
 }
+today: number = Date.now();
+
+
 }
